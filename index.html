@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/removeDefaults.css" />
+  <link rel="stylesheet" href="./css/main.css">
+  
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <style>
+    main {
+      background: url(../images/pexels-christina-morillo-1181681.jpg) no-repeat left center fixed;
+      background-size: cover;
+      height: 100vh;
+      overflow: auto;
+    }
+
+    #mainWrap {
+      width: 35%;
+      margin: 65px auto;
+      height: 80vh;
+      background: #a2a2a2a6;
+      position: relative;
+      box-shadow: 2px 1px 10px 1px rgb(94, 94, 94);
+      border-radius: 5px;
+    }
+
+    #user {
+      width: 100px;
+      height: 100px;
+      background: #fff;
+      border-radius: 50%;
+      padding: 10px 0px 0px 10px;
+      position: absolute;
+      top: -50px;
+      left: 40%;
+    }
+
+    #user img {
+      width: 90%;
+      border-radius: 50%;
+    }
+
+    #formWrap {
+      padding: 75px;
+    }
+
+    .formEle {
+      width: 90%;
+      padding: 10px;
+      border: 1px solid #888;
+      /* box-shadow: 0px 0px 5px 1px #ccc; */
+      margin-top: 10px;
+      position: relative;
+      background: #fff;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select,
+    button {
+      width: 100%;
+      padding: 0px 18px 0px 35px;
+      /* line-height: 40px; */
+      border: none;
+      outline: none;
+      /* border: 1px solid #ccc; */
+    }
+
+    .fas {
+      position: absolute;
+      font-size: 18px;
+      /* padding: 2px; */
+    }
+
+    /* .fas::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 40px;
+        background: #ccc;
+        left: 30px;
+        top: -10px;
+      } */
+  </style>
+</head>
+
+<body>
+  <main>
+    <article id="mainWrap">
+      <div id="user">
+        <img src="./images/images (1).png" alt="user" />
+      </div>
+      <div class="error-main" id="error-main">
+        <p id="error" class="none"></p>
+      </div>
+      <section id="formWrap">
+        <div class="formEle">
+          <i class="fas fa-address-card"></i>
+          <input type="text" placeholder="username" name="usernmae" id="username" />
+        </div>
+        <div class="formEle">
+          <i class="fas fa-key"></i>
+          <input type="password" placeholder="Password" name="password" id="password" />
+        </div>
+        <div class="formEle">
+          <i class="fas fa-envelope-open-text"></i>
+          <input type="email" placeholder="Email" name="email" id="email" />
+        </div>
+        <div class="formEle">
+          <input type="radio" name="gender" value="male" /> Male
+          <input type="radio" name="gender" value="male" /> Female
+        </div>
+        <div class="formEle">
+          <i class="fas fa-city"></i>
+          <select name="country" id="country">
+            <option value="none">Select a City</option>
+            <option value="hyd">Hyderabad</option>
+            <option value="bng">Banglore</option>
+            <option value="del">Delhi</option>
+          </select>
+        </div>
+        <div class="formEle">
+          <input type="checkbox" name="agree" value="agree" /> I agree
+          <p>
+            <input type="checkbox" name="receive" value="receive" /> I Want to
+            Recive
+          </p>
+        </div>
+        <div class="formEle">
+          <button type="button" onclick="onSubmit()">Register</button>
+        </div>
+      </section>
+    </article>
+  </main>
+
+
+  <script src="./js/main.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>
