@@ -8,10 +8,28 @@
   <title>Document</title>
   <link rel="stylesheet" href="./css/removeDefaults.css" />
   <link rel="stylesheet" href="./css/main.css">
-  
+
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+      background: whitesmoke;
+    }
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+
     main {
       background: url(../images/pexels-christina-morillo-1181681.jpg) no-repeat left center fixed;
       background-size: cover;
@@ -113,8 +131,8 @@
           <input type="email" placeholder="Email" name="email" id="email" />
         </div>
         <div class="formEle">
-          <input type="radio" name="gender" value="male" /> Male
-          <input type="radio" name="gender" value="male" /> Female
+          <input type="radio" name="gender" value="male" class="gender" /> Male
+          <input type="radio" name="gender" value="female" class="gender" /> Female
         </div>
         <div class="formEle">
           <i class="fas fa-city"></i>
@@ -126,17 +144,32 @@
           </select>
         </div>
         <div class="formEle">
-          <input type="checkbox" name="agree" value="agree" /> I agree
-          <p>
+          <input type="checkbox" name="agree" value="agree" id="consent" /> I agree
+          <!-- <p>
             <input type="checkbox" name="receive" value="receive" /> I Want to
             Recive
-          </p>
+          </p> -->
         </div>
         <div class="formEle">
           <button type="button" onclick="onSubmit()">Register</button>
         </div>
       </section>
     </article>
+    <div class="bind-user">
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Password</th>
+          <th>Email</th>
+          <th>Gender</th>
+          <th>City</th>
+          <th>Do you Agree</th>
+        </tr>
+        <tbody id="bindUser">
+        </tbody>
+
+      </table>
+    </div>
   </main>
 
 
